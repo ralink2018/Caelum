@@ -41,7 +41,7 @@ public class DadosConta {
 		return this.data = data;
 	}
 	
-	public static int getIdentificador() {
+	public int getIdentificador() {
 		return identificador;
 	}
 	
