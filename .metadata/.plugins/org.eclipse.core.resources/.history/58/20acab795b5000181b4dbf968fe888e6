@@ -1,0 +1,12 @@
+
+public class DadosConta {
+	
+	private String nome;
+	private Integer numero;
+	private String agencia;
+	private Double saldo;
+	private String dataAbertura;
+	
+	
+
+}

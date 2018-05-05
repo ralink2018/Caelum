@@ -1,0 +1,35 @@
+import java.text.SimpleDateFormat;
+
+
+
+public class TesteConta {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		DadosConta dat = new DadosConta();
+
+		
+		dat.setNome("Rafael");
+		dat.setNumero(3562);
+		dat.setAgencia("35628-9");
+		dat.setSaldo(1500.80);
+		
+		
+		DadosConta dat2 = new DadosConta();
+		dat2.setNome("Rafael");
+		dat2.setNumero(3562);
+		dat2.setAgencia("35628-9");
+		dat2.setSaldo(1500.80);
+		
+		if(dat == dat2){
+			System.out.println("Objetos Iguais");
+		}else{
+			System.out.println("Objetos Diferentes");
+		}
+		
+		System.out.println("Saldo Atual: " + dat.recuperarDadosParaImpressao());
+		System.out.println("Rendimento Mensal: " + dat.calcularRendimentos());
+	}
+
+}
