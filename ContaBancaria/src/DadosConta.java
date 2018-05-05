@@ -5,6 +5,8 @@ public class DadosConta {
 	private Integer numero;
 	private String agencia;
 	private Double saldo;
+	private static int identificador;
+	
 	Data data = new Data();
 	
 	public String getNome() {
@@ -39,6 +41,10 @@ public class DadosConta {
 		return this.data = data;
 	}
 	
+	public int getIdentificador() {
+		return identificador;
+	}
+	
 	void sacar(double valor){
 		this.saldo -= valor;
 	}
@@ -61,6 +67,16 @@ public class DadosConta {
 		dados += "\nDia: " + this.data.getDia();
 		dados += "\nMes:" + this.data.getMes();
 		dados += "\nAno: " + this.data.getAno();
+		dados += "\nIdentificador: " + DadosConta.identificador++;
 		return dados;
 	}
+	
+	//Construtores
+	public DadosConta(String titular){
+		this.nome = titular;
+	}
+	public DadosConta(){
+		
+	}
+
 }

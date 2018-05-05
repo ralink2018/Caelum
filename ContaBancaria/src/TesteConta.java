@@ -17,9 +17,22 @@ public class TesteConta {
 		
 		dat.setData(data);
 		
+		DadosConta dat2 = new DadosConta();
+		Data data2 = new Data();
 		
-		System.out.println("Saldo Atual: " + dat.recuperarDadosParaImpressao());
+		dat2.setNome("Helena Oliveira");
+		dat2.setNumero(6666);
+		dat2.setAgencia("35678-9");
+		dat2.setSaldo(1500.80);
+		data2.setDia(18);
+		data2.setMes(06);
+		data2.setAno(2018);
+		
+		dat2.setData(data2);
+		
+		System.out.println("Informacao: " + dat.recuperarDadosParaImpressao());
 		System.out.println("Rendimento Mensal: " + dat.calcularRendimentos());
+		System.out.println("Identificador: " + dat2.recuperarDadosParaImpressao());
 	}
 
 }
