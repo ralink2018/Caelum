@@ -1,6 +1,7 @@
 package br.com.caelum.contas.modelo;
 
-public class ContaCorrente extends Conta{
+// Classe Corrente extende Conta e implementa a Interface Tributavel.
+public class ContaCorrente extends Conta implements Tributavel{
 	
 	//Sobreescrita do metodo sacar na classe Conta.
 	@Override
@@ -10,6 +11,11 @@ public class ContaCorrente extends Conta{
 	
 	public String getTipo(){
 		return "Conta Corrente";
+	}
+
+	@Override
+	public double getValorImposto() {
+		return this.getSaldo() * 0.01;
 	}
 	
 }

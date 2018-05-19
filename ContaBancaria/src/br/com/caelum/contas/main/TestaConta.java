@@ -7,7 +7,7 @@ public class TestaConta {
 	
 	public static void main(String[] args){
 //		TelaDeContas.main(args);
-		SistemaBancario.mostraTela(false);
+		SistemaBancario.mostraTela(true);
 	}
 
 }
