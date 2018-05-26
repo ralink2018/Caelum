@@ -1,6 +1,6 @@
 package br.com.caelum.contas.modelo;
 
-public class Conta {
+public class Conta implements Comparable<Conta>{
 	
 	private String titular;
 	private Integer numero;
@@ -48,7 +48,12 @@ public class Conta {
 	}
 	
 	public void depositar(double valor){
-		this.saldo += valor;
+		if(valor < 0){
+			throw new IllegalArgumentException("Voce tentou depositar um valor negativo!");
+		}
+		else{
+			this.saldo += valor;
+		}
 	}
 	
 	//Metodo Calcular Rendimentos
@@ -79,14 +84,24 @@ public class Conta {
 	public String getTipo(){
 		return "Conta";
 	}
+	
 	public void saca(double valor) {
-		
-		
+				
 	}
 	
 	public void transfere(double valor, Conta conta){
 		this.saca(valor);
 		this.depositar(valor);
+	}
+	
+	@Override
+	public String toString(){
+		return "[Titular=" + titular + ", Numero=" + numero + ", Agencia=" + agencia + "]";
+		
+	}
+	
+	public int compareTo(Conta outraConta){
+		return this.titular.compareTo(outraConta.titular);
 	}
 
 }
